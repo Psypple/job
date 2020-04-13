@@ -44,8 +44,8 @@ for i in range(n+1):
         kyy=ky[j]
         for p in range(N+1):
             for q in range(N+1):
-                jifen=jifen+np.cos(kxx*(p-N/2)+kyy*(q-N/2))*E[p][q]
-        Ek[i][j]=jifen
+                jifen=jifen+np.sin(kxx*(p-N/2)+kyy*(q-N/2))*E[p][q]
+        Ek[i][j]=abs(jifen)
 plt.figure(figsize=[10,10])
 plt.gca().xaxis.set_major_formatter(FuncFormatter(changex))#放缩坐标
 plt.gca().yaxis.set_major_formatter(FuncFormatter(changey))
